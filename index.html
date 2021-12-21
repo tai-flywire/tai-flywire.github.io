@@ -48,8 +48,9 @@
         };
 
         var callbacks = {
-          onClose: function() {
+          onClose: foo => {
             console.log("PAYMENT EXPERIENCE FINISHED");
+            console.log(foo);
           }
         };
 
