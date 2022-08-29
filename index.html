@@ -8,8 +8,19 @@
   <!-- Add meta header for IE Compatibility -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <!-- Include the flywire-integration.js script -->
   <script src="https://agents-integration.demo.flywire.com/flywire-integration.js"></script>
+  <script type="text/javascript">
+    $.ajax({
+      url: "https://agents.demo.flywire.com/api/payments/4e556c3f-60f1-43f1-b634-eb398d18ffff/pay",
+      headers: {
+        "X-Authentication-Key": "sIxmLRG5PkGj0eKp8cKo3czb0g65OhEo",
+        "Accept": "application/flywire.agents.payment.details+json;version=1.0"
+      }
+    }).done(function() {
+});
+  </script>
 </head>
 
 <body>
@@ -17,8 +28,8 @@
   <button id="payButton">
     Pay now with Flywire
   </button><br/>
-  <a href="https://agents.demo.flywire.com/api/payments/4e556c3f-60f1-43f1-b634-eb398d18ffff/pay">pay link from API</a><br/>
-  <a href="https://agents.demo.flywire.com/api/payments/4e556c3f-60f1-43f1-b634-eb398d18ffff">self link from API</a><br/>
+  <!-- <a href="javascript: void(0);" id="pay-link">pay link from API</a><br/>
+  <a href="https://agents.demo.flywire.com/api/payments/4e556c3f-60f1-43f1-b634-eb398d18ffff">self link from API</a><br/> -->
 
   <script>
     // Add an event listener
@@ -29,7 +40,7 @@
 
         const values = {
           // see Configuration values for all supported fields
-          reference: '4JUCA4', // REQUIRED - will be provided by Flywire
+          reference: '6Q4CYK', // REQUIRED - will be provided by Flywire
           email: 'payer@example.com', // optional
           first_name: 'Example', // optional
           last_name: 'Payer', // optional
