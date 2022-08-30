@@ -12,24 +12,16 @@
   <!-- Include the flywire-integration.js script -->
   <script src="https://agents-integration.demo.flywire.com/flywire-integration.js"></script>
   <script type="text/javascript">
-    $('#pay-link').click(e => {
-      $.ajax({
-      url: "https://agents.demo.flywire.com/api/payments/18fdb0b1-58f3-40e6-9482-5d828460c231/pay",
-      headers: {
-        "X-Authentication-Key": "sIxmLRG5PkGj0eKp8cKo3czb0g65OhEo"
-      }
-    })
+    $( document ).ready(function() {
+      $('#pay-link').click(e => {
+        $.ajax({
+          url: "https://agents.demo.flywire.com/api/payments/18fdb0b1-58f3-40e6-9482-5d828460c231/pay",
+          headers: {
+            "X-Authentication-Key": "sIxmLRG5PkGj0eKp8cKo3czb0g65OhEo"
+          }
+        })
+      });
     });
-    /*
-    $.ajax({
-      url: "https://agents.demo.flywire.com/api/payments/4e556c3f-60f1-43f1-b634-eb398d18ffff/pay",
-      headers: {
-        "X-Authentication-Key": "sIxmLRG5PkGj0eKp8cKo3czb0g65OhEo"
-      }
-    }).done(function() {
-      debugger;
-    });
-    */
   </script>
 </head>
 
