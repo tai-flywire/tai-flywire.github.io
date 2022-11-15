@@ -29,37 +29,11 @@
         e.preventDefault();
 
         const config = {
-          // see Configuration values for all supported fields
-          reference: '4JUCA4', // REQUIRED - will be provided by Flywire
-          email: $('#email').val(), // optional
-          first_name: $('#first_name').val(), // optional
-          last_name: $('#last_name').val(), // optional
-          country: $('#country').val(), // optional
-          phone: $('#phone').val(), // optional
-
-          // Custom fields - this is just an example of how to pass them
-          // reach out to Flywire to configure your custom fields
-          customFields: [{
-              key: 'agent_name',
-              value: 'John Brown'
-            },
-            {
-              key: 'agent_email',
-              value: 'john.brown@company.com'
-            }
-          ]
-        };
-
-
-        var callbacks = {
-          onClose: foo => {
-            console.log("PAYMENT EXPERIENCE FINISHED");
-            console.log(foo);
-          }
+          reference: '4JUCA4'
         };
 
         // Initiate the Flywire integration window
-        window.FlywireIntegration.initiate(config, callbacks);
+        window.FlywireIntegration.initiate(config);
       });
     });
   </script>
